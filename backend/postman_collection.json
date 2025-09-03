@@ -1,0 +1,56 @@
+{
+  "info": {
+    "name": "MiniEcom API",
+    "_postman_id": "miniecom-collection",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Register",
+      "request": {
+        "method": "POST",
+        "url": "{{BASE}}/api/auth/register/",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"username\": \"u1\", \"email\": \"u1@x.com\", \"password\": \"pass\"}"
+        }
+      }
+    },
+    {
+      "name": "Token",
+      "request": {
+        "method": "POST",
+        "url": "{{BASE}}/api/auth/token/",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"username\": \"u1\", \"password\": \"pass\"}"
+        }
+      }
+    },
+    {
+      "name": "Products - List",
+      "request": {
+        "method": "GET",
+        "url": "{{BASE}}/api/products/"
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "BASE",
+      "value": "http://localhost:8000"
+    }
+  ]
+}
